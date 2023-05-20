@@ -12,7 +12,20 @@ window.onscroll = function () {
     div.classList.remove("up-to-top");
     change.classList.remove("change-size");
   }
+
+  if (window.scrollY >= 600) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
 };
+
+//button scroll to top
+let btn = document.getElementById("scroll-to-top");
+btn.onclick = function () {
+  window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+};
+
 //responsive toggle menu clickable
 function myFunction() {
   var x = document.getElementById("myTopnav");
